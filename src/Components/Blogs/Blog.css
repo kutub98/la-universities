@@ -1,0 +1,9 @@
+.peer-checked{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.shadows{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background: white !important;
+    color: #021c15 !important;
+   
+}
