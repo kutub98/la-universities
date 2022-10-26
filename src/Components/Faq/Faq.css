@@ -1,0 +1,9 @@
+.faq{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 15px 50px;
+}
+.faQ div{
+    margin: 5px 0;
+}

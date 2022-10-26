@@ -7,4 +7,29 @@
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    margin: 20px 60px;
+}
+.courseSection{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 10px;
+    margin: 30px 50px;
+}
+.title{
+    margin: 20px 0px;
+}
+.title li{
+    padding: 10px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 8px;
+    list-style: none;
+    text-transform: capitalize;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: #4fc2a0;
+    font-weight: 500;
 }

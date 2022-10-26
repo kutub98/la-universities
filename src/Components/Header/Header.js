@@ -54,7 +54,7 @@ const Header = () => {
             {user?.uid ?
             <div>
               <h1>{user?.displayName}</h1>
-              <button onClick={logOut}>Log Out</button>
+              <button className="bg-green-600 py-2 px-2 text-white" onClick={logOut}>Log Out</button>
             </div> 
             : <Link to='/login'>Sign in</Link>
             }

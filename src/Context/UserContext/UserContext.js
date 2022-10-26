@@ -10,7 +10,7 @@ const auth = getAuth(app)
 
 const UserContext = ({children}) => {
     const [user, setUser] = useState()
-    console.log(user)
+    // console.log(user)
     // login with GoogleProvider ==================
     const googleProvider = new GoogleAuthProvider()
     const signWithGoogle = ()=>{

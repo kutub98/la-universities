@@ -10,6 +10,7 @@ import Main from "../Main/Main";
 import Teachers from "../Teachers/Teachers";
 import Faq from "../Faq/Faq.js";
 import PrivateRoute from "../PrivetaRoute/PrivateRoute";
+import CourseDetails from "../CourseDetails/CourseDetails";
 
 const Roots = () => {
   const router = createBrowserRouter([
@@ -29,7 +30,9 @@ const Roots = () => {
         { path: "register", element: <Register></Register> },
         { path: "teachers", element: <Teachers></Teachers> },
         { path: "askedQuestion", element: <Faq></Faq> },
-        {path: ''}
+        {path: '/allCourse/:id', 
+        loader: ({params})=> fetch(`http://localhost:5000/allCourse/${params.category_id}`),
+        element:<CourseDetails></CourseDetails>}
       ],
     },
     { path: "*", element: <ErrorPage></ErrorPage> },

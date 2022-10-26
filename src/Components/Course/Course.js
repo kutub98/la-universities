@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import SingleCourse from '../SingleCourse/SingleCourse';
 import './Course.css'
 
@@ -15,14 +15,18 @@ const Course = () => {
     //     .then(res => res.json())
     //     .then(data => setAllCourse(data))
     // },[])
-    console.log(allCourse)
+    // console.log(allCourse)
     return (
-        <div>
-            <h1>All course are here</h1>
+        <div className="courseSection">
             <div className="CourseBox">
             {
                 allCourse.map(sCourse => <SingleCourse key={sCourse.id} sCourse={sCourse}></SingleCourse>)
             }
+            </div>
+            <div className='title'>
+               {
+                allCourse.map(title => <li key={title.id}><Link>{title.title}</Link></li>)
+               }
             </div>
         </div>
     );
