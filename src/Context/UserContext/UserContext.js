@@ -25,6 +25,7 @@ const UserContext = ({children}) => {
 
     // Creating new user functions================
     const HandlingCreatingNewUser = (email, password) =>{
+        console.log(email, password)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 

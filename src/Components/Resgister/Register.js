@@ -24,10 +24,11 @@ const Register = () => {
     const form = event.target;
     const FirstName = form.FirstName.value;
     const LastName = form.LastName.value;
-    const email = form.email.value;
+    const email = form.Email.value;
     const password = form.Password.value;
     const ConfirmPassword = form.ConfirmPassword.value;
-    // console.log("name" + FirstName, "last" + LastName, "email" + email, "p" + password, "pc" + ConfirmPassword);
+    console.log("name" + FirstName, "last" + LastName, "email" + email, "p" + password, "pc" + ConfirmPassword);
+    console.log(event.target.Email)
 
     // function for confirm password matching
 
@@ -126,14 +127,14 @@ const Register = () => {
               </label>
               <input
                 type="email"
-                name="email"
+                name="Email"
                 id="email"
                 placeholder="your@emai.com"
                 className="w-full px-2 py-1 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
               />
             </div>
             <div>
-              <label for="email" className=" text-sm">
+              <label for="photoURL" className=" text-sm">
               photoURL
               </label>
               <input
@@ -199,7 +200,7 @@ const Register = () => {
                 type="submit"
                 className="w-full px-3 py-1 font-semibold rounded-md bg-pink-600 signUp text-gray-50"
               >
-                Sign in
+                Sign up
               </button>
             </div>
 

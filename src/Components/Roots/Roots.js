@@ -24,7 +24,7 @@ const Roots = () => {
         { path: "home", element: <Home></Home> },
         {
           path: "course",
-          loader: ()=> fetch('http://localhost:5000/allCourse'),
+          loader: ()=> fetch('https://launiversity.vercel.app/allCourse'),
           element: <PrivateRoute><Course></Course></PrivateRoute>,
         },
         { path: "blog", element: <Blogs></Blogs> },
@@ -33,7 +33,7 @@ const Roots = () => {
         { path: "teachers", element: <Teachers></Teachers> },
         { path: "askedQuestion", element: <Faq></Faq> },
         {path: '/allCourse/:id', 
-        loader: ({params})=> fetch(`http://localhost:5000/allCourse/${params.id}`),
+        loader: ({params})=> fetch(`https://launiversity.vercel.app/allCourse/${params.id}`),
         element:<CourseDetails></CourseDetails>},
         {path: 'premium', element: <PrivateRoute><PremiumAccess></PremiumAccess></PrivateRoute>},
         {path: 'profile' , element: <Profile></Profile>}
