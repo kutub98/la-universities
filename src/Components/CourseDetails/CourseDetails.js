@@ -34,7 +34,7 @@ const CourseDetails = () => {
             <div className="buttonDiv">
             <button className="font-semibold px-5 py-3 bg-green-900  text-lg text-white">Enroll Now</button>
             <p> Apply for Premium Access</p>
-            <Link to="" className="font-semibold px-5 py-3 bg-green-900  text-lg text-white">Premium Access</Link>
+            <Link to="/premium" className="font-semibold px-5 py-3 bg-green-900  text-lg text-white">Premium Access</Link>
             </div>
           </div>
         </div>

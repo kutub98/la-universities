@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../Context/UserContext/UserContext";
+import Course from "../Course/Course";
 
 
 const Home = () => {
@@ -53,6 +54,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

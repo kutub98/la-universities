@@ -11,6 +11,7 @@ import Teachers from "../Teachers/Teachers";
 import Faq from "../Faq/Faq.js";
 import PrivateRoute from "../PrivetaRoute/PrivateRoute";
 import CourseDetails from "../CourseDetails/CourseDetails";
+import PremiumAccess from "../PremiumAccess/PremiumAccess";
 
 const Roots = () => {
   const router = createBrowserRouter([
@@ -32,7 +33,8 @@ const Roots = () => {
         { path: "askedQuestion", element: <Faq></Faq> },
         {path: '/allCourse/:id', 
         loader: ({params})=> fetch(`http://localhost:5000/allCourse/${params.id}`),
-        element:<CourseDetails></CourseDetails>}
+        element:<CourseDetails></CourseDetails>},
+        {path: 'premium', element: <PrivateRoute><PremiumAccess></PremiumAccess></PrivateRoute>}
       ],
     },
     { path: "*", element: <ErrorPage></ErrorPage> },
