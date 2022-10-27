@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import "./CourseDetails.css";
 
 const CourseDetails = () => {
@@ -24,14 +24,18 @@ const CourseDetails = () => {
             <img src={thumbnail_url} alt=""></img>
           </div>
           <div className="courseDetails">
-            <h1>Course name: {title}</h1>
-            <h3>Durations : {duration}</h3>
-            <h3> Total Course{Course_fee}</h3>
-            <h3>First semester fee {firstSemesterFee}</h3>
-            <h2>Total Credit :{total_Credit}</h2>
-            <h3>Per Credit fee: {perCreditPee}</h3>
-            <h3>{admissionFee}</h3>
-            <button>Enroll Now</button>
+            <h1 className=" font-extrabold text-lg mb-2 ">Course name: {title}</h1>
+            <h3 className="font-semibold text-lg text-green-900 mb-2">Durations : {duration}</h3>
+            <h1 className="font-semibold text-lg text-black mb-2"> Total Course{Course_fee}</h1>
+            <h3 className="font-semibold text-lg text-green-900 mb-2">First semester fee {firstSemesterFee}</h3>
+            <h1 className="font-semibold text-lg text-black mb-2">Total Credit :{total_Credit}</h1>
+            <h3 className="font-semibold text-lg text-green-900 mb-2">Per Credit fee: {perCreditPee}</h3>
+            <h3 className="font-semibold text-lg text-black mb-2">{admissionFee}</h3>
+            <div className="buttonDiv">
+            <button className="font-semibold px-5 py-3 bg-green-900  text-lg text-white">Enroll Now</button>
+            <p> Apply for Premium Access</p>
+            <Link to="" className="font-semibold px-5 py-3 bg-green-900  text-lg text-white">Premium Access</Link>
+            </div>
           </div>
         </div>
       </div>

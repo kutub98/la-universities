@@ -19,43 +19,43 @@ const Header = () => {
   
   return (
     <div>
-      <header className="p-4 mb-2 items-center border border-2 bg-white text-gray-800">
-        <div className="container flex justify-between  h-16 mx-auto">
+      <header className="p-4  bg-white">
+        <div className="container menuContainer ">
           <Link to="home" aria-label="Back to homepage" className="flex items-center p-2">
             <img src={logo} alt="" className=" h-16 w-70 items-center mt-2 hidden md:block lg:block" />
             <h1 className=" Hidden">LaU </h1>
           </Link>
           {openMenu ? (
             <ul
-              className=" hidden lg:block"
+              className="menubar"
             >
-              <li className="flex">
+              <li className="">
                 <Link
                   to="home"
-                  className="flex font-bold items-center px-4 -mb-1 border-b-2 border-transparent text-green-600 border-green-800"
+                  className=" font-bold items-center px-4 -mb-1 border-b-2 border-transparent text-green-600 border-green-800"
                 >
                   Home
                 </Link>
               </li>
-              <li className="flex">
-                <Link to="course" className="flex font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
+              <li className="">
+                <Link to="course" className=" font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
                   Course
                 </Link>
               </li>
-              <li className="flex">
-                <Link to="teachers" className="flex font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
+              <li className="">
+                <Link to="teachers" className=" font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
                   Teachers
                 </Link>
               </li>
-              <li className="flex">
-                <Link to="blog" className="flex font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
+              <li className="">
+                <Link to="blog" className=" font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
                   Blog
                 </Link>
               </li>
-              <li className="flex">
+              <li className="">
                 <Link
                   to="askedQuestion"
-                  className="flex font-bold items-center px-4 -mb-1 border-b-2 border-transparent"
+                  className=" font-bold items-center px-4 -mb-1 border-b-2 border-transparent"
                 >
                   FAQ
                 </Link>
@@ -66,22 +66,22 @@ const Header = () => {
               <ul>
                 <Link
                   to="home"
-                  className="flex font-bold items-center px-4 -mb-1 border-b-2 border-transparent text-green-600 border-green-800"
+                  className=" font-bold items-center px-4 -mb-1 border-b-2 border-transparent text-green-600 border-green-800"
                 >
                   Home
                 </Link>
-                <Link to="course" className="flex font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
+                <Link to="course" className=" font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
                   Course
                 </Link>
-                <Link to="teachers" className="flex font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
+                <Link to="teachers" className=" font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
                   Teachers
                 </Link>
-                <Link to="blog" className="flex font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
+                <Link to="blog" className=" font-bold items-center px-4 -mb-1 border-b-2 border-transparent">
                   Blog
                 </Link>
                 <Link
                   to="askedQuestion"
-                  className="flex font-bold items-center px-4 -mb-1 border-b-2 border-transparent"
+                  className=" font-bold items-center px-4 -mb-1 border-b-2 border-transparent"
                 >
                   FAQ
                 </Link>
@@ -90,14 +90,14 @@ const Header = () => {
           )}
           <div className="items-center loginRegister flex-shrink-0 hidden lg:flex">
             {user?.uid ? (
-              <div>
+              <div className="loginRegister">
                 <h1>{user?.displayName}</h1>
-                <button className="bg-green-600 py-2 px-2 text-white" onClick={logOut}>
+                <button className="bg-green-600 py-3 px-2 text-white" onClick={logOut}>
                   Log Out
                 </button>
               </div>
             ) : (
-              <Link to="/login">Sign in</Link>
+              <button className="bg-green-600 py-3 py-2 " to="/login">Sign in</button>
             )}
           </div>
           <div

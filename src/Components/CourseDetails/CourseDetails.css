@@ -12,7 +12,7 @@
     padding: 10px;
     text-align: center;
 }.CourseImg{
-    border: 5px solid whitesmoke;
+    border: 5px solid rgb(255, 255, 255);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -21,7 +21,8 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .courseDetails{
-    background-color: rgb(244, 245, 245);
+    background-color: white;
+    padding: 0 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -33,4 +34,9 @@
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+}
+.buttonDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

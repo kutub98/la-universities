@@ -7,6 +7,7 @@ import './Course.css'
 
 const Course = () => {
     const allCourse = useLoaderData();
+    const {id} = allCourse;
     // console.log(allCourse);
     // const [allCourse, setAllCourse] = useState([])
 
@@ -25,7 +26,7 @@ const Course = () => {
             </div>
             <div className='title'>
                {
-                allCourse.map(title => <li key={title.id}><Link title='title'>{title.title}</Link></li>)
+                allCourse.map(title => <li key={title.id}><Link to= {`/allCourse/${id}`}  >{title.title}</Link></li>)
                }
             </div>
         </div>

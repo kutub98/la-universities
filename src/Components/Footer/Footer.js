@@ -6,40 +6,41 @@ const Footer = () => {
   return (
     <div>
       <footer className="px-4 divide-y FooterPart bg-gray-100 text-gray-800">
-        <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-          <div className="lg:w-1/3">
-            <Link to="/" rel="noopener noreferrer" href="/" className="flex justify-center space-x-3 lg:justify-start">
+        <div className="container FooterContainer ">
+          
+          <div className="footerLINKS">
+          <div className="logo">
+            <Link to="home"   className="flex justify-center space-x-3 lg:justify-start">
               <img src={logo} alt="" className=" h-16 w-70 items-center mt-2" />
             </Link>
           </div>
-          <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
             <div className="space-y-3">
-              <h3 className="tracking-wide uppercase text-gray-900">Product</h3>
+              <h3 className="tracking-wide uppercase text-gray-900">Quick Links</h3>
               <ul className="space-y-1">
                 <li>
-                  <Link to="/">
-                    Features
+                  <Link to="/home">
+                    Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
-                    Integrations
+                  <Link to="/blog">
+                    Blog
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
-                    Pricing
+                  <Link to="course">
+                    Course
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/faq">
                     FAQ
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="tracking-wide uppercase text-gray-900">Company</h3>
+              <h3 className="tracking-wide uppercase text-gray-900">Our Policy</h3>
               <ul className="space-y-1">
                 <li>
                   <Link to="/">
@@ -53,26 +54,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="space-y-3">
-              <h3 className="uppercase text-gray-900">Developers</h3>
-              <ul className="space-y-1">
-                <li>
-                  <Link to="/">
-                    Public API
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    Guides
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            
             <div className="space-y-3">
               <div className="uppercase text-gray-900">Social media</div>
               <div className="flex justify-start space-x-3">

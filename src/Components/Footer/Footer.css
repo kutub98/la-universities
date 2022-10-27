@@ -6,3 +6,13 @@ ul li a{
     font-weight: 400;
     color: #4fc2a0 !important;
 }
+.footerLINKS{
+    display: flex;
+   justify-content: space-between;
+}
+@media screen and (min-width: 200px) and (max-width: 550px) {
+    .footerLINKS{
+        display: block;
+        margin: 4px auto;
+    }
+}

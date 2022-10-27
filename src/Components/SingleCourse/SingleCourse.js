@@ -8,14 +8,14 @@ const SingleCourse = ({sCourse}) => {
     return (
         <div>
             <div className="">
-                <div className="singleCourese relative">
+                <div className="singleCourse">
                     <img src={thumbnail_url} alt="" className="w-full h-52" />
-                    <div className="courseText">
-                        <h1>{title}</h1>
+                    <div className="courseText relative">
+                        <h1 className='text-sm font-extrabold'>{title}</h1>
                         <h1>Total Credit: {total_Credit}</h1>
                         <h1>Course fee : {Course_fee}</h1>
-                        <Link key={id} to={`/allCourse/${id}`}>More Details</Link>
                     </div>
+                    <Link className="bg-green-700  px-4 py-3 justify-center text-white rounded-md" key={id}  to={`/allCourse/${id}`}>More Details</Link>
                 </div>
             </div>
         </div>
