@@ -24,6 +24,7 @@
     background-color: white;
     padding: 0 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 350px;
 }
 
 .CourseImg img{
@@ -39,4 +40,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+@media screen and (min-width: 781px) and (max-width: 1050px){
+    .fullDetails{
+        display: grid;
+        grid-template-columns: 4fr 5fr;
+        gap: 20px;
+        margin: 10px 60px;
+    }
+    .buttonDiv button{
+        padding: 10px 12px !important;
+    }
+    
+}
+@media screen and (min-width: 200px) and (max-width: 780px){
+    .fullDetails{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin: 10px 60px;
+    }
+    .buttonDiv{
+        display: block !important;
+    }
+    .buttonDiv button{
+        padding: 8px 12px !important;
+    }
+    
 }
