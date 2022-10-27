@@ -1,14 +1,4 @@
 
-
-@media screen and (min-width:200) and (max-width: 768px) {
-    .faq{
-        display: grid !important;
-        grid-template-columns: repeat(1, 1fr) !important;
-        gap: 30px !important;
-        margin: 15px 50px !important;
-    } 
-}
-
 .faq{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -18,3 +8,12 @@
 .faQ div{
     margin: 5px 0;
 }
+@media screen and (min-width:200) and (max-width: 768px) {
+    .faq {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin: 15px 50px;
+    }
+}
+

@@ -48,13 +48,14 @@ const Register = () => {
       })
       setPasswordMatching(" Sorry password did not match!");
     }
-    form.reset()
+    
     
     HandlingCreatingNewUser(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
         verifyYourEmail();
+        form.reset()
       })
       .catch((error) => console.error(error));
   };
@@ -128,6 +129,18 @@ const Register = () => {
                 name="email"
                 id="email"
                 placeholder="your@emai.com"
+                className="w-full px-2 py-1 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
+              />
+            </div>
+            <div>
+              <label for="email" className=" text-sm">
+              photoURL
+              </label>
+              <input
+                type="text"
+                name="photoURL"
+                id="email"
+                placeholder="photoURL"
                 className="w-full px-2 py-1 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
               />
             </div>

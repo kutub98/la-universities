@@ -91,13 +91,13 @@ const Header = () => {
           <div className="items-center loginRegister flex-shrink-0 hidden lg:flex">
             {user?.uid ? (
               <div className="loginRegister">
-                <h1>{user?.displayName}</h1>
+                <Link to='profile'>{user?.displayName}</Link>
                 <button className="bg-green-600 py-3 px-2 text-white" onClick={logOut}>
                   Log Out
                 </button>
               </div>
             ) : (
-              <button className="bg-green-600 py-3 py-2 " to="/login">Sign in</button>
+              <button className="bg-green-600 py-3 py-2"><Link className="text-white bg-green-600" to="/login">Sign in</Link></button>
             )}
           </div>
           <div
