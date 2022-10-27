@@ -1,17 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 
 const CourseDetails = () => {
-   const [courseDetails, setCourseDetails] = useState([])
+    // const {id}= useParams();
+    // console.log(id)
+   
 
-    useEffect((id)=>{
-        fetch(`http://localhost:5000/allCourse/${id}`)
-        .then(res => res.json())
-        .then(data => setCourseDetails(data))
-    },[])
-    console.log(courseDetails)
+   const myData = useLoaderData()
+   console.log(myData)
+
+
+    
     return (
         <div>
            

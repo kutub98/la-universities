@@ -31,7 +31,7 @@ const Roots = () => {
         { path: "teachers", element: <Teachers></Teachers> },
         { path: "askedQuestion", element: <Faq></Faq> },
         {path: '/allCourse/:id', 
-        loader: ({params})=> fetch(`http://localhost:5000/allCourse/${params.category_id}`),
+        loader: ({params})=> fetch(`http://localhost:5000/allCourse/${params.id}`),
         element:<CourseDetails></CourseDetails>}
       ],
     },

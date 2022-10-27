@@ -7,3 +7,52 @@
 ul a{
     color: #4fc2a0 !important;
 }
+@media screen and (min-width: 200px) and (max-width: 770px){
+    .Hidden{
+        display: block;
+        font-size: 40px;
+        font-weight: 600;
+        color: #4fc2a0;
+        cursor: pointer;
+    }
+    
+    .openMenu ul a{
+      
+        display: block !important;
+        top: 200px !important;
+      
+    }
+    .openMenu ul ul {
+        margin: 10px 0;
+        top: 8px !important;
+        right: 40px !important;
+        display: block;
+          z-index: 1000 !important;
+        padding: 10px !important;
+        background: whitesmoke;
+        box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+        border-radius: 5px;
+    }
+}
+@media screen and (min-width: 771px){
+    .Hidden{
+        display: none;
+        font-size: 40px;
+        font-weight: 600;
+        color: #4fc2a0;
+        cursor: pointer;
+    }
+}
+.openMenu ul{
+    margin: 10px 0;
+    top: 200px;
+    right: 200px !important;
+    display: block;
+}
+.openMenu ul a{
+    display: inline;
+}
+
+.openMenu{
+    margin-right: 80px;
+}

@@ -25,7 +25,7 @@ const Course = () => {
             </div>
             <div className='title'>
                {
-                allCourse.map(title => <li key={title.id}><Link>{title.title}</Link></li>)
+                allCourse.map(title => <li key={title.id}><Link title='title'>{title.title}</Link></li>)
                }
             </div>
         </div>
