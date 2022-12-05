@@ -23,7 +23,7 @@ const Login = () => {
   const location = useLocation()
   console.log(user)
 
-  const from = location.state?.from?.pathname || '/'
+  const from = location.state?.from?.pathname
   // login withEmailPassword=================
   const loginWithEmailPassword = (event) => {
     event.preventDefault();
@@ -33,21 +33,22 @@ const Login = () => {
     // console.log(email, password);
 
     login(email, password)
-      .then((result) => {
+    if(user.emailVerified){
+      navigate(from, {replace: true});
+    }
+   setAlertWrongEmail('email is not verified')
+  
+      .then(result => {
+        
         const name = result.user;
         console.log(name)
         form.reset()
-        if(user.emailVerified){
-          navigate(from, {replace: true});
-        }
-        navigate('/')
-       
       })
       .catch((error) => {
         let wrongPasswordError = error.message;
-        wrongPasswordError = "Email Or Password is wrong!";
         setWrongPassword(wrongPasswordError);
       });
+      form.reset()
   };
 
   /// signIn with Github ======================
@@ -80,11 +81,10 @@ const Login = () => {
 
   // Password reset email sent!
   const forgetPassword = () => {
-    const email = prompt("Enter Your Email");
-    sendPasswordResetEmail(auth, resetPassword)
+    const resetEmail = prompt("Enter Your Email");
+    sendPasswordResetEmail(auth, resetEmail)
       .then(() => {})
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
         setAlertWrongEmail(errorMessage);
       });

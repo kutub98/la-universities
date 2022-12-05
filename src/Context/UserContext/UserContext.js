@@ -40,7 +40,7 @@ const UserContext = ({children}) => {
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
 
-            setUser(currentUser)
+            // setUser(currentUser)
             // if(user?.emailVerified){
             //     setUser(currentUser)
             // }
